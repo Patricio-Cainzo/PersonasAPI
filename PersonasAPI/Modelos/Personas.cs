@@ -10,7 +10,7 @@ namespace PersonasAPI.Modelos
         public string Nombre { get; set; }
         [Required]
         public string Apellido { get; set;}
-
+        [MaxLength (100)]
         public string? Direccion { get; set; }
 
         public string? Email { get; set; }
