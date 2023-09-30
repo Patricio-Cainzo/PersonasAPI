@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PersonasAPI.Data;
 using PersonasAPI.Modelos;
+using PersonasAPI.Repositorio;
 
 namespace PersonasAPI.Controllers
 {
@@ -14,6 +15,7 @@ namespace PersonasAPI.Controllers
     [ApiController]
     public class PersonasController : ControllerBase
     {
+        private readonly IPersonaRepositorio _repoitorio;
         private readonly DataContext _context;
 
         public PersonasController(DataContext context)
